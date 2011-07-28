@@ -538,7 +538,7 @@ class Table_Core {
 	 */
 	public function set_callback($function_name, $type = 'body', $keys = NULL)
 	{
-		if(function_exists($function_name))
+		if(is_callable($function_name))
 		{
 			// setup
 			$type = str_replace(' ', '_', $type);
